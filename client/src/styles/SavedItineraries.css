@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Tint&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+.saved-itineraries-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "PT Serif", serif;
+}
+
+.saved-itineraries-title {
+  margin-top: 2rem;
+  font-size: 2.5em;
+  color: #be6a09;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.loading-message,
+.error-message,
+.no-itineraries {
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
+}
+
+.error-message {
+  color: #d32f2f;
+}
+
+.itinerary-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.itinerary-item {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.itinerary-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.itinerary-number {
+  background-color: #4caf50;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.itinerary-details {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.itinerary-name {
+  margin: 0;
+  color: #023047;
+  font-size: 1.2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itinerary-date {
+  margin: 5px 0 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.view-button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.view-button:hover {
+  background-color: #1976d2;
+}
+
+@media (max-width: 768px) {
+  .saved-itineraries-container {
+    padding: 15px;
+  }
+
+  .saved-itineraries-title {
+    font-size: 2em;
+    margin-bottom: 2rem;
+  }
+
+  .itinerary-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .itinerary-number {
+    margin-bottom: 10px;
+  }
+
+  .itinerary-details {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .itinerary-name {
+    font-size: 1.1em;
+  }
+
+  .view-button {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .saved-itineraries-title {
+    font-size: 1.8em;
+  }
+
+  .itinerary-name {
+    font-size: 1em;
+  }
+
+  .itinerary-date {
+    font-size: 0.8em;
+  }
+
+  .view-button {
+    font-size: 0.9em;
+    padding: 6px 12px;
+  }
+}
